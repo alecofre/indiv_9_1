@@ -1,0 +1,19 @@
+<div id="<%= dom_id publication %>">
+  <p>
+    <strong>Title:</strong>
+    <%= publication.title %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= publication.content %>
+  </p>
+
+  <p>
+    <strong>Label:</strong>
+    <% publication.labels.each do |n| %>
+      <%= n.name %>
+    <% end %>
+  </p>
+
+</div>
