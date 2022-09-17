@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/:id/publications', to: 'users#show'
+  devise_for :users
   resources :labels
   resources :publications do
     resources :labels

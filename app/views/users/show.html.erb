@@ -1,0 +1,19 @@
+<div>
+    <h3>
+        Usuario: <%= @user.email %>
+    </h3>
+</div>
+<div class="card border-primary col-12 col-md-4">
+    <% @user.publications.each do |p| %>
+        <p>
+        <strong>
+            Publicacion: <%= p.title %>
+        </strong>
+        </p>
+        <% p.labels.each do |l| %>
+            <p>
+                Etiquetas: <%= l.name %>
+            </p>
+        <% end %>
+    <% end %>
+</div>

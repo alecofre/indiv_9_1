@@ -24,11 +24,13 @@
   <div>
     <p>Etiquetas</p>
     <%= form.fields_for :labels do |label_f| %>
-      <%# label_f.label :name, style: "display: block" %>
         <%= label_f.text_field :name %>
     <% end %>
   </div>
 
+  <div>
+    <%= form.hidden_field :user_id, value:current_user.id %>
+  </div>
 
   <div>
     <%= form.submit  %>
